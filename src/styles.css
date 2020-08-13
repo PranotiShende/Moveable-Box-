@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* You can add global styles to this file, and also import other style files  */
+.bg-img {
+	font-family: 'SourceSansPro' !important;
+    background-image: url(../src/assets/images/kayboard.jpg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    height: auto;
+    overflow: hidden;
+    width: auto;
+    font-size: 0.9em !important;
+    
+}
+

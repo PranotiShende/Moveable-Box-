@@ -1,33 +1,22 @@
-<div class="container-fluid" style="margin-top: 25px; margin-left: 20px;">
-  <div class="row">
-    <div class="col-md-8">
-      <section class="content-header">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-6">
-              <h1>Movable Box</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="example-button-row">
-        <button (click)="addBox()">Add New Box</button>
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title style="text-align:center;color:gray">
+        <h4>Movable Box</h4>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <button mat-raised-button type="button" (click)="addBox()" class="btn">Add New Box</button>
       </div>
-      <div style="margin-top: 25px; margin-left: 20px;" *ngFor="let box of boxArray">
+      <div style="margin-left: 20px;" *ngFor="let box of boxArray">
+        <!-- <mat-divider *ngIf="box >= 2"></mat-divider> -->
         <div (click)="selectedBox(box)" id="{{ 'box' + box }}"
-          [ngStyle]="selectedRowIndex == box? {'background-color':'red'} : {'background-color': 'white'}" class="box">
+          [ngStyle]="selectedRowIndex == box? {'background-color':'#e53935'} : {'background-color': '#fb8c00'}" class="box">
           {{box}}
         </div>
       </div>
-    </div>
-  </div>
+    </mat-card-content>
+  </mat-card>
 </div>
-<style>
-  .box {
-    width: 100px;
-    height: 100px;
-    color: rgba(0, 0, 0, 0.87);
-    border: solid 1px #ccc;
-    z-index: 10;
-  }
-</style>
+

@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { OrderByPipe } from './shared/OrderBy.component';
 import * as $ from 'jquery';
 
+import { MaterialModule } from './shared/matarial.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,8 @@ import * as $ from 'jquery';
 
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
